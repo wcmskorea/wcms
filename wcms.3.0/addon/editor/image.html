@@ -1,0 +1,122 @@
+<?php
+#------------------------------------------------------------------------------
+# 작업내용: 에디터 파일 업로드
+# 작성일자: 2007-07-02
+#------------------------------------------------------------------------------
+require_once "../../_config.php";
+#------------------------------------------------------------------------------
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>이미지 첨부</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="/common/css/default.css" type="text/css" charset="utf-8" media="all" />
+<link rel="stylesheet" href="/user/default/cache/stylesheet.css" type="text/css" charset="utf-8" media="all" />
+<style type="text/css">
+body {margin:0;padding:0;}
+img{border:0;}
+h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,li,ol,th,td,p,blockquote,form,fieldset,legend {margin:0;padding:0;}
+
+body{background:#fff;}
+body, td, th {  font-size:12px; font-family:'굴림',gulim,sans-serif; }
+input,textarea { vertical-align:middle; }
+em{font-style:normal;font-weight:normal;}
+a { text-decoration:none; color:#333; }
+a:hover { text-decoration:underline; }
+dl, dt, dd, ul, ol, li, p { margin:0; padding:0; list-style:none; }
+
+.clear {display:block; float:none; clear:both; height:0; width:100%; font-size:0 !important; line-height:0 !important; overflow:hidden; margin:0 !important; padding:0 !important;}
+
+.wrapper { margin:0 auto;}
+.header { height:34px; padding:0 9px 0 20px; background-image:url(/addon/editor/images/icon/editor/pop_header_bg.gif?rv=1.0.1); }
+.header h1 { float:left; display:inline; font-size:100%; color:#fff; font-weight:bold; margin-top:11px; }
+.header p { float:right; width:200px; color:#999; font-family:AppleGothic,'돋움',dotum,sans-serif; font-size:11px; letter-spacing:-1px; padding-top:7px; }
+.header p em { float:right; margin-top:4px; }
+
+.body { background-color:#fff; padding:5px; position:relative; }
+
+.alert { padding:0; background:url(/addon/editor/images/icon/editor/file/ico_stop.gif?rv=1.0.1) 0 0 no-repeat; margin:14px 20px 21px; color:#999; }
+.alert dt { margin:0; font-size:12px; font-weight:bold; color:#6486e4; padding:8px 0 9px 37px; }
+.alert dd { line-height:17px; margin:0 0 0 26px; padding:0;}
+.alert strong { color:#a7b9ec; font-weight:normal; }
+.alert a { color:#666; text-decoration:none; background:url(/addon/editor/images/icon/editor/b_link.gif?rv=1.0.1) 100% 50% no-repeat; padding:0 7px 0 0; }
+.alert a:hover { text-decoration:underline; }
+
+.footer { padding:10px 0; height:25px; background-color:#e9e9e9; clear:both; text-align:center; }
+.footer ul { margin:0 auto; width:105px; }
+.footer li {float:left;}
+.footer p {float:right; margin:3px 12px 0 0;}
+.footer p a.close {display:block; text-indent:-5000px;background:url(/addon/editor/images/icon/editor/bt_close.gif?v=2) no-repeat;width:38px;height:13px;}
+</style>
+<script type="text/javascript">
+// <![CDATA[
+function checkImg (el)
+{
+  var file = el.value;
+  var allowSubmit = false;
+  var extArray = new Array('.jpg','.jpeg','.gif','.png');
+  extArray.join(" ");
+  if (!file) return false;
+  while (file.indexOf("\\") != -1)
+     file = file.slice(file.indexOf("\\") + 1);
+  var ext = file.slice(file.lastIndexOf(".")).toLowerCase();
+  for (var i = 0; i < extArray.length; i++) {
+      if (extArray[i] == ext) {
+          allowSubmit = true;
+          break;
+      }
+  }
+  if (allowSubmit) {
+      return true;
+  }
+  else {
+      alert("그림 삽입은 GIF, JPG(JPEG), PNG 파일만 가능합니다. 다시 선택하여 주십시요.");
+      el.select();
+      document.selection.clear();
+      return false;
+  }
+}
+
+function initUploader(){
+	var _opener = PopupUtil.getOpener();
+	if (!_opener) {
+		alert('잘못된 경로로 접근하셨습니다.');
+		return;
+	}
+
+	var _attacher = getAttacher('image', _opener);
+	registerAction(_attacher);
+}
+// ]]>
+</script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<h1>이미지 삽입하기</h1>
+	</div>
+	<div class="body" style="width:350px">
+
+	<form id="insertImage" name="insertImage" action="./imagePost.php" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="type" value="<?php echo($sess->encode('editorFilePost'));?>" />
+	<input type="hidden" name="cate" value="<?php echo(__CATE__);?>" />
+	<input type="hidden" name="op" value="image" />
+
+	<dl class="alert">
+		<dt>사진 첨부 확인</dt>
+		<dd>그림은 GIF, JPG(JPEG), PNG 파일만 가능합니다.</dd>
+		<dt>파일선택 (<?php echo(@ini_get('upload_max_filesize'));?>이하)</dt>
+		<dd><input type="file"  name="upfile" title="파일선택" onchange="checkImg(this)" /></dd>
+	</dl>
+	<div class="footer">
+		<p><a href="javascript:;" onclick="self.close();" title="닫기" class="close">닫기</a></p>
+		<ul>
+			<li><button type="submit" class="btnPack medium blue"><span>등록</span></button></li>
+			<li>&nbsp;<span class="btnPack medium black"><a href="javascript:;" onclick="self.close();" title="취소">취소</a></span></li>
+		</ul>
+	</div>
+</div>
+</form>
+</body>
+</html>
