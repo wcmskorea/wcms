@@ -1,0 +1,139 @@
+<?php
+require_once "../../_config.php";
+if(__CATE__ == '000') { $mod->err("본 페이지는 지원하지 않습니다.","window.self.close()"); }
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<title><?php echo($cfg['site']['siteName']);?> :: [WCMS-<?php echo(strtoupper($cfg['site']['lang']));?>]</title>
+	<meta http-equiv="content-type"	content="application/xhtml+xml; charset=<?php echo($cfg['charset']);?>" />
+	<meta http-equiv="content-style-type" content="text/css" />
+	<link rel="stylesheet" href="<?php echo($cfg['droot']);?>common/css/admin.css" type="text/css" charset="<?php echo($cfg['charset']);?>" media="all" />
+	<script type="text/javascript" src="<?php echo($cfg['droot']);?>common/js/common.js"></script>
+	<script type="text/javascript" src="<?php echo($cfg['droot']);?>common/js/jquery.js"></script>
+	<script type="text/javascript" src="<?php echo($cfg['droot']);?>common/js/jquery.validate.js"></script>
+	<script type="text/javascript" src="<?php echo($cfg['droot']);?>common/js/ajax.js"></script>
+</head>
+<?php
+if($_POST['type'] == 'cateContentPost')
+{
+//	접근 제한
+	$func->checkRefer("POST");
+
+	$content = ($_POST['mode'] == 'html') ? trim($_POST[content]) : trim($_POST[content01]);
+	$content = str_replace('http://'.__HOST__.'/', '/', $content);
+	$content = str_replace('=\"/', '=\"'.$cfg[droot], $content);
+	$content = str_replace("=\'/", "=\'".$cfg[droot], $content);
+
+//	콘텐츠 저장
+//	$db->query(" UPDATE `site__` SET mode='',hidden='".$_POST['hide']."',content='".$content."' WHERE cate='".__CATE__."' ");
+//	@file_put_contents(__HOME__.'data/html/'.__CATE__.'.html', stripslashes($content));
+
+	if(!is_dir(__PATH__."_Site/".__DB__."/".$_POST['skin']."/cache/document")) { mkdir(__PATH__."_Site/".__DB__."/".$_POST['skin']."/cache/document"); }
+	$fp = fopen(__PATH__."_Site/".__DB__."/".$_POST['skin']."/cache/document/".__CATE__.".html", "w");
+	fwrite($fp, stripslashes($content));
+	fclose($fp);
+
+	//공개여부설정
+	$db->query("UPDATE `site__` SET status='".$_POST['hide']."' WHERE cate='".__CATE__."'");
+	$func->alt("성공적으로 저장되었습니다.");
+}
+
+//카테고리 모듈
+$Rows = $db->queryFetch(" SELECT name,status FROM `site__` WHERE skin='".$_POST['skin'].$_GET['skin']."' AND cate='".__CATE__."' ");
+if($db->getNumRows() < 1)
+{
+	$func->err("기본정보가 없습니다.", "window.self.close();");
+}
+else
+{
+	$Rows['content'] = stripslashes(@file_get_contents(__PATH__."_Site/".__DB__."/".$_POST['skin'].$_GET['skin']."/cache/document/".__CATE__.".html"));
+}
+?>
+<body style="background:url();">
+<div id="content">
+<form id="bbsform" name="bbsform" method="post" action="<?php echo($_SERVER['PHP_SELF']);?>" enctype="multipart/form-data">
+<input type="hidden" name="type" value="cateContentPost" />
+<input type="hidden" name="skin" value="<?php echo($_POST['skin'].$_GET['skin']);?>" />
+<input type="hidden" name="cate" value="<?php echo(__CATE__);?>" />
+<input type="hidden" id="mode" name="mode" value="html" />
+<input type="hidden" name="fileName" value="" />
+
+<table class="table_basic" style="width: 100%;">
+	<colgroup>
+	<col width="100">
+	<col>
+	</colgroup>
+	<thead>
+		<tr>
+			<th colspan="2">위치 : <?php echo($category->printHistory());?></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>공개여부</th>
+			<td><input name="hide" type="radio" id="hide1" class="input_radio" value="hide"<?php if($Rows['status'] == "hide"){echo(' checked="checked"');}?> /><label for="hide1">비공개</label>
+			<input name="hide" type="radio" id="hide2" class="input_radio" value="normal"<?php if($Rows['status'] == "normal"){echo(' checked="checked"');}?> /><label for="hide2">공개</label>
+			</td>
+		</tr>
+		<tr>
+			<th>카테고리명</th>
+			<td><input class="input_text" type="text" name="cateName" style="width: 99%;" title="카테고리 이름" value="<?php echo($Rows['name']);?>" /></td>
+		</tr>
+		<tr>
+			<th>캐시 저장위치</th>
+			<td><?php echo("/_Site/".__DB__."/".$_POST['skin'].$_GET['skin']);?>/cache/document/<?php echo(__CATE__);?>.html</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="pd5 right"><span class="btnPack black small"><a href="javascript:;" onclick="$.toggleMode()">모드변경</a></span>&nbsp;<span class="btnPack red small strong"><button type="submit" onclick="submitForm(this.form);">적용하기</button></span></div>
+
+<!-- 텍스트모드 : start -->
+<div id="editor01" style="display:none;" class="editor">
+	<div class="line"><textarea id="content01" name="content01"	title="텍스트모드" wrap="off" style="border:0px solid #000; width:100%; height:400px; font-size:13px; font-style:normal; font-family:Courier New; line-height:1.5; white-space:2px;"><?php echo($Rows['content']);?></textarea></div>
+</div>
+<!-- 텍스트모드 : end -->
+
+<!-- 에디터모드 : start -->
+<div id="editor02" style="display: block;">
+	<?php
+		include __PATH__."addon/editor/editor.php";
+	?>
+</div>
+<!-- 에디터모드 : end -->
+
+<div class="pd5 right"><span class="btnPack black small"><a href="javascript:;" onclick="$.toggleMode()">모드변경</a></span>&nbsp;<span class="btnPack red small strong"><button type="submit" onclick="submitForm(this.form);">적용하기</button></span></div>
+</form>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function()
+{
+	if($('#editor01').display != 'none')
+	{
+		//Editor.getContent({"content": $tx("content01")});
+		Editor.modify({"content": $tx("content01")});
+	}
+	$.toggleMode = function()
+	{
+		$("#editor01").toggle();
+		$("#editor02").toggle();
+		if(toGetElementById("editor02").style.display == "block")
+		{
+			$("#mode").val('html');
+		}
+		else
+		{
+			$("#mode").val('text');
+		}
+	};
+	<?php if(__CATE__ === "000997" || __CATE__ === "000998") { echo('$.toggleMode();'); } ?>
+	//$("input[type=text],input[type=password],textarea").focus(function(){$(this).toggleClass("input_active");}).blur(function(){$(this).toggleClass("input_active");});
+	$(document).keypress(function(e){if(e.which == 27) window.self.close();});
+});
+//]]>
+</script>
+</body>
+</html>
