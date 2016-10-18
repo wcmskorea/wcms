@@ -1,0 +1,29 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	#administrator page
+	#RewriteRule ^admin$ ./_Admin/ [L]
+	#RewriteRule ^admin/$ ./_Admin/ [L]
+	
+	#search view
+	RewriteRule ^search$ ./search.php [L]
+	RewriteRule ^search/$ ./search.php [L]
+	RewriteRule ^module.php$ ./index.php [L]
+
+	#module view
+	RewriteRule ^([[:digit:]]+)$ ./index.php?cate=$1 [L]
+	RewriteRule ^([[:digit:]]+)/([a-zA-Z0-9_\$\*]+)$ ./index.php?cate=$1&type=$2 [L]	
+	RewriteRule ^([[:digit:]]+)/([a-zA-Z0-9_\$\*]+)/([0-9]+)$ ./index.php?cate=$1&type=$2&num=$3 [L]
+	
+	#error
+	RewriteRule ^home$ ./index.php [L]
+	RewriteRule ^home/$ ./index.php [L]
+	RewriteRule ^html$ ./index.php [L]
+	RewriteRule ^bbs/board.php$ ./index.php [L]
+	RewriteRule ^community.php$ ./index.php [L]
+	RewriteRule ^community/community.asp$ ./index.php [L]
+</IfModule>
+<FilesMatch ".(cgi|pl|sh|exe)$"> 
+	Order allow,deny 
+	Deny from all
+</FilesMatch>

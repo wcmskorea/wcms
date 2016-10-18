@@ -1,0 +1,54 @@
+<?php
+/**
+ * 인트로 페이지 : 인트로가 없다면 index.php로 이동
+ */
+require_once "_config.php";
+
+if(preg_match('/\/pcver\//i', $_SERVER['REQUEST_URI']))
+{
+	setCookie("PAGE", "pcver", 0, "/", ".".__HOST__, 0);
+}
+
+if(defined('__CATE__')) 
+{
+	Header("Location: ./index.php?".$_SERVER['QUERY_STRING']);
+	exit(0);
+}
+else 
+{
+  	//인트로 LOAD
+	if($db->queryFetchOne(" SELECT status FROM `site__` WHERE cate='000001' ") != 'hide')
+	{
+		$intro = trim(stripslashes(@file_get_contents(__HOME__."cache/document/000001.html")));
+	}
+
+	//Frameset 출력
+	if($cfg['site']['frame'] == 'Y')
+	{
+		$display->mode = "intro";
+    	//Header 출력
+    	$display->loadHeader('intro');
+		//Frame 출력
+		require_once __HOME__."frame.php";
+		//Footer 출력
+		$display->loadFooter('intro');
+	} 
+	else
+	{
+		if(!$intro || defined('__CATE__'))
+		{
+			//Main 출력
+			Header("Location: ./index.php?".$_SERVER['QUERY_STRING']);
+		} 
+		else 
+		{
+			//Intro 출력
+			Header("Location: ./intro.php?".$_SERVER['QUERY_STRING']);
+		}
+    exit(0);
+	}
+}
+$db->freeResult();
+unset($buffer);
+unset($cfg);
+?>
