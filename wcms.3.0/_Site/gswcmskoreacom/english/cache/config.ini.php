@@ -6,7 +6,7 @@
 
 [site]
 id = "wcms";
-authCode = "wcmskorea";
+authCode = "LQc.ATNlSxK3A";
 siteName = "(주)10억홈피";
 siteTitle = "현재 홈페이지 준비중입니다.";
 ceo = "이성준";
@@ -19,7 +19,7 @@ phone = "062-374-4242";
 fax = "062-374-4249";
 address = "(506-306) 광주 광산구 신창동 1123-3, 2층";
 operator = "10억홈피";
-mobile = "010-2984-0407";
+mobile = "010-4615-9969";
 email = "master@aceoa.com";
 modules = "mdDocument,mdMember,mdBanner,mdApp01,mdPopup,mdSms,mdAnalytic";
 openSkin = "Y";
@@ -37,16 +37,16 @@ sizeSsnb = "205";
 sizeSside = "0";
 ssl = "443";
 debug = "0";
-dateReg = "1476823763";
+dateReg = "1384134802";
 dateCheck = "1367024400";
-info = "2016-10-18 22:49:21|127.0.0.1|default";
+info = "2013-11-11 11:31:09|192.168.0.237|default";
 tracking = "0";
 siteDescription = "10억홈피";
 keywords = "10억홈피";
 zipcode = "";
 description = "10억홈피";
 apiDaummap = "407cc29ab293eba3c35aaf216909033728b12cee";
-domain = "gs.wcmskorea.com";
+domain = "192.168.0.105";
 regyear = "2013";
 regmonth = "9";
 regday = "13";
