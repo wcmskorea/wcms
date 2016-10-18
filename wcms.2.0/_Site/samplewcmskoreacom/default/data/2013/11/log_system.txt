@@ -1,0 +1,4 @@
+[2013/11/11 11:04:06][192.168.0.237][master][/home/acehost/public_html/_Admin/loginAccess.php]시스템관리자 로그인 성공
+[2013/11/11 11:24:43][192.168.0.237][master][/home/acehost/public_html/modules/mdMember/modifyForm.php]회원정보 열람
+[2013/11/11 11:30:47][192.168.0.237][master][/home/acehost/public_html/modules/mdMember/modifyForm.php]회원정보 열람
+[2013/11/11 11:32:50][192.168.0.240][master][/home/acehost/public_html/modules/mdMember/manage/detailView.php]회원정보(wcms) 열람
