@@ -1,0 +1,14 @@
+@charset "utf-8";
+/*
+프린트시 적용되는 Style입니다.
+*/
+
+body {font: 9pt/1.5 sans-serif;background: white; color: black;}
+/* 참고로 9pt/1.5 는 9pt 폰트사이즈에 line-height 
+   줄간격을 1.5배로 하라는 것이 되겠습니다. */
+
+h1 {font-size: 18pt; font-weight:bold}
+h2 {font-size: 15pt; font-weight:bold}
+h3 {font-size: 11pt; font-weight:bold}
+
+#content {background: transprent;}
