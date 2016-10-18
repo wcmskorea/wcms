@@ -1,1 +1,0 @@
-[2013/04/25 13:11:55][112.222.92.149][master][/home/acehost/wcms/_Admin/loginAccess.php]시스템관리자 로그인 성공

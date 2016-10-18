@@ -1,1 +1,0 @@
-[2013/10/17 09:10:00][192.168.0.199][master][/home/acehost/public_html/modules/mdMember/logAccess.php]시스템관리자 로그인 성공

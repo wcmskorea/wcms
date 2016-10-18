@@ -1,6 +1,0 @@
-[2013/06/26 15:51:22][112.222.92.149][master][/home/acehost/wcms/_Admin/loginAccess.php]시스템관리자 로그인 성공
-[2013/06/26 16:31:10][112.222.92.149][master][/home/acehost/wcms/_Admin/modules/categoryRegist.php]카테고리 (005->005)수정 성공
-[2013/06/26 16:31:26][112.222.92.149][master][/home/acehost/wcms/_Admin/modules/categoryRegist.php]카테고리 (005001->005001)수정 성공
-[2013/06/26 17:55:06][112.222.92.149][master][/home/acehost/wcms/_Admin/loginAccess.php]시스템관리자 로그인 성공
-[2013/06/27 10:03:06][112.222.92.149][master][/home/acehost/wcms/_Admin/loginAccess.php]시스템관리자 로그인 성공
-[2013/06/27 11:59:54][112.222.92.149][master][/home/acehost/wcms/_Admin/site/infoPost.php]시스템 정보 변경

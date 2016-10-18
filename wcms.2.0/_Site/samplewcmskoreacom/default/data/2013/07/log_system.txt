@@ -1,4 +1,0 @@
-[2013/07/09 10:38:55][112.222.92.149][master][/home/acehost/wcms/_Admin/loginAccess.php]시스템관리자 로그인 성공
-[2013/07/23 15:31:55][112.222.92.149][master][/home/acehost/wcms/_Admin/loginAccess.php]시스템관리자 로그인 성공
-[2013/07/23 15:32:11][112.222.92.149][master][/home/acehost/wcms/_Admin/site/infoPost.php]시스템 정보 변경
-[2013/07/23 16:08:08][112.222.92.149][master][/home/acehost/wcms/_Admin/loginAccess.php]시스템관리자 로그인 성공
