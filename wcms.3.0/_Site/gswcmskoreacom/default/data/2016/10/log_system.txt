@@ -1,0 +1,23 @@
+[2016/10/10 08:26:52][127.0.0.1][master][G:\xampp\htdocs\wcms\modules\mdMember\logAccess.php]시스템관리자 로그인 성공
+[2016/10/10 20:49:12][127.0.0.1][master][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]시스템관리자 로그인 성공
+[2016/10/10 20:50:36][127.0.0.1][][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]운영자 로그인 실패
+[2016/10/10 20:50:47][127.0.0.1][master][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]시스템관리자 로그인 성공
+[2016/10/10 20:50:56][127.0.0.1][master][G:\xampp\htdocs\wcms\modules\mdMember\manage\detailView.php]회원정보(wcms) 열람
+[2016/10/10 20:54:02][127.0.0.1][][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]운영자 로그인 실패
+[2016/10/10 20:54:10][127.0.0.1][master][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]시스템관리자 로그인 성공
+[2016/10/10 20:55:30][127.0.0.1][master][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]시스템관리자 로그인 성공
+[2016/10/10 20:57:17][127.0.0.1][master][G:\xampp\htdocs\wcms\modules\mdMember\manage\detailPost.php]회원(wcmskr)등록 성공
+[2016/10/10 20:57:33][127.0.0.1][][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]운영자 로그인 실패
+[2016/10/10 20:57:44][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]운영자 로그인 성공
+[2016/10/10 20:58:37][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]운영자 로그인 성공
+[2016/10/10 21:03:31][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]운영자 로그인 성공
+[2016/10/10 21:04:44][127.0.0.1][][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]운영자 로그인 실패
+[2016/10/10 21:04:53][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]운영자 로그인 성공
+[2016/10/10 21:05:36][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\modules\mdMember\manage\detailView.php]회원정보(wcms) 열람
+[2016/10/10 21:06:25][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]운영자 로그인 성공
+[2016/10/10 21:07:19][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]운영자 로그인 성공
+[2016/10/10 21:20:18][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]운영자 로그인 성공
+[2016/10/10 21:22:13][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\modules\mdDocument\processPost.php]게시글 (001-1)삭제(휴지통) 성공
+[2016/10/10 21:25:21][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\modules\mdDocument\modifyPost.php]게시물 (001-1)수정 성공
+[2016/10/12 23:27:25][127.0.0.1][master][G:\xampp\htdocs\wcms\modules\mdMember\logAccess.php]시스템관리자 로그인 성공
+[2016/10/13 23:07:13][127.0.0.1][master][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]시스템관리자 로그인 성공

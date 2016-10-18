@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<menu homeURL="/index.php" siteURL="/?cate=000999" mailURL="master@aceoa.com" color="">
+    <주메뉴 col="100" link="/index.php?cate=001&menu=1" target="_self" kText="메뉴01" eText="menu01" subX="" color="">
+    <서브메뉴 link="/index.php?cate=001001&menu=1&sub=1" target="_self" text="메뉴01-01">
+        <소메뉴 link="/index.php?cate=001001001&menu=1&sub=1" target="_self" text="메뉴01-01-01"/>
+    </서브메뉴>
+    </주메뉴>
+    <주메뉴 col="100" link="/index.php?cate=002&menu=2" target="_self" kText="메뉴02" eText="menu02" subX="" color="">
+    <서브메뉴 link="/index.php?cate=002001&menu=2&sub=1" target="_self" text="메뉴02-01">
+    </서브메뉴>
+    </주메뉴>
+    <주메뉴 col="100" link="/index.php?cate=003&menu=3" target="_self" kText="메뉴03" eText="menu03" subX="" color="">
+    <서브메뉴 link="/index.php?cate=003001&menu=3&sub=1" target="_self" text="메뉴03-01">
+    </서브메뉴>
+    </주메뉴>
+    <주메뉴 col="100" link="/index.php?cate=004&menu=4" target="_self" kText="메뉴04" eText="menu04" subX="" color="">
+    <서브메뉴 link="/index.php?cate=004001&menu=4&sub=1" target="_self" text="메뉴04-01">
+    </서브메뉴>
+    </주메뉴>
+    <주메뉴 col="100" link="/index.php?cate=005&menu=5" target="_self" kText="메뉴05" eText="menu05" subX="" color="">
+    <서브메뉴 link="/index.php?cate=005001&menu=5&sub=1" target="_self" text="메뉴05-01">
+    </서브메뉴>
+    </주메뉴>
+</menu>

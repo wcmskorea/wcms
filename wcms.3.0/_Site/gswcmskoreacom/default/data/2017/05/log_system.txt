@@ -1,0 +1,8 @@
+[2017/05/16 21:12:50][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]운영자 로그인 성공 - 비밀번호만료
+[2017/05/16 21:13:21][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\_Admin\passwdPost.php]비밀번호 변경
+[2017/05/16 21:14:37][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]운영자 로그인 성공 - 비밀번호만료
+[2017/05/16 21:15:45][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]운영자 로그인 성공 - 비밀번호만료
+[2017/05/16 21:16:59][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\_Admin\passwdPost.php]비밀번호 변경
+[2017/05/16 21:17:10][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]운영자 로그인 성공 - 비밀번호만료
+[2017/05/16 21:19:10][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\_Admin\passwdPost.php]비밀번호 변경
+[2017/05/16 21:19:33][127.0.0.1][wcmskr][G:\xampp\htdocs\wcms\_Admin\loginAccess.php]운영자 로그인 성공
