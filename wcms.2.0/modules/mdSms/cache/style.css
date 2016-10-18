@@ -1,0 +1,31 @@
+
+/* mdSms */
+#sms .cell {width:200px; position:relative; float:left; overflow:hidden}
+#sms .info {width:400px; position:relative; float:left; overflow:hidden}
+#sms .sms_sender {border:1px solid #c9d8f5; padding:2px 0 0 2px; height:15px; vertical-align:middle; background:#e3eef9 url(/user/default/image/background/bg_sms_return.gif) no-repeat}
+#sms .sms_content {border:1px solid #c9d8f5; padding:2px 0 0 2px; vertical-align:middle; background:#e3eef9 url(/user/default/image/background/bg_sms_lcd.gif) no-repeat}
+
+/* SMS 팝업 */
+#sms_pop{width:207px;position:absolute;width:207px;left:10px;top:10px;z-index:2005;cursor: move;}
+#sms_pop .sms_top{width:207px;height:64px;background-image: url(/user/default/image/modules/sms/sms_bg01.png); background-repeat: repeat-x; behavior:url(/common/css/iepngfix.htc);}
+#sms_pop .sms_bg_1{width:207px;height:15px;background-image: url(/user/default/image/modules/sms/sms_bg02.gif); background-repeat: repeat-x;}
+#sms_pop .sms_bg_2{width:207px;height:30px;background-image: url(/user/default/image/modules/sms/sms_bg03.gif); background-repeat: repeat-x;}
+#sms_pop .sms_bg_2 div{position:relative;left:118px;top:9px;font-size: 11px; color: #990000; LETTER-SPACING: -0.04em;}
+#sms_pop .sms_bg_3{height:155px;background-image: url(/user/default/image/modules/sms/sms_bg04.gif); background-repeat: repeat-x;text-align:center}
+#sms_pop .sms_bg_4{padding-left:37px;padding-top:7px;height:38px;background-image: url(/user/default/image/modules/sms/sms_bg05.gif); background-repeat: repeat-x;}
+#sms_pop .sms_bg_5{height:47px;background-image: url(/user/default/image/modules/sms/sms_bg05.gif); background-repeat: repeat-x;}
+#sms_pop .sms_bg_4 p{padding-bottom:3px;}
+#sms_pop .sms_bottom{height:56px;background-image: url(/user/default/image/modules/sms/sms_bg06.png); background-repeat: repeat-x; behavior:url(/common/css/iepngfix.htc);}
+
+/* SMS Addon Type - recent_01 */
+#sms_box {width:150px; margin:auto}
+#sms_box h3 {border-bottom:2px dotted #e1e1e1; padding-bottom:3px; padding-right:5px; font-size:12px; font-weight:bold; text-align:left}
+#sms_box h3 .keeping {margin-left:10px; font-weight:normal}
+#sms_box ul {margin-top:3px}
+#sms_box li {padding:1px 0 1px 0; vertical-align:middle}
+#sms_box .sms_lcd {padding-top:20px; width:150px; text-align:center; background:url(/user/default/image/background/bg_sms_body01.gif) no-repeat}
+
+/* SMS Addon Type - recent_02 */
+#sms_box02 {border:1px solid #d2d2d2; background:url(/user/default/image/background/bg_sms_body02.gif) no-repeat}
+#sms_box02 li {padding:1px 0 1px 0; vertical-align:middle}
+#sms_box02 .sms_lcd {padding:56px 0 0 40px; width:150px; text-align:center}

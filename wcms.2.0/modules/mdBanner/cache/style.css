@@ -1,0 +1,12 @@
+
+/**
+ * mdBanner
+ */
+.banner {overflow:hidden; position:relative; border:0px #efefef solid}
+.banner .thumbNail {margin:auto}
+.banner .bx-prev {position:absolute; top:35px; left:10px; z-index:100; width: 30px; height: 30px; text-indent: -999999px; background: url(/user/default/image/icon/bxSlider_prev.png) no-repeat 0 -30px; filter:alpha(opacity=70); opacity:0.7; -moz-opacity:0.7}
+.banner .bx-next {position:absolute; top:35px; left:50px; z-index:100; width: 30px; height: 30px; text-indent: -999999px; background: url(/user/default/image/icon/bxSlider_next.png) no-repeat 0 -30px; filter:alpha(opacity=70); opacity:0.7; -moz-opacity:0.7}
+.banner .bx-next:hover,.bx-prev:hover {background-position: 0 0;}
+.banner .bx-pager a {margin-right:3px; color: #fff; padding: 5px 8px 3px 6px; font-size: 11px; zoom:1; background: url(/user/default/image/icon/bxSlider_pager.png) no-repeat 0 -20px;}
+.banner .bx-pager .pager-active, .bx-pager a:hover {background-position: 0 0;}
+.banner .bx-pager {position:absolute; top:60px; left:10px; z-index:101; text-align:center; padding-top:7px; font-size:11px; color:#666}
