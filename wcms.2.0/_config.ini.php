@@ -19,8 +19,8 @@ api             = "";
 apiKey          = "";
 
 [db]
-dbUser          = "";                                                   ;데이터베이스 계정 아이디
-dbPass          = "";                                               ;데이터베이스 계정 비밀번호
+dbUser          = "root";                                                   ;데이터베이스 계정 아이디
+dbPass          = "wcms4242";                                               ;데이터베이스 계정 비밀번호
 dbName          = "";
 
 [upload]                                                                    ;Flex 멀티 업로더 설정

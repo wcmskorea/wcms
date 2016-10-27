@@ -191,7 +191,7 @@ else if($sess->decode($_POST['type']) == 'postSeted' || $sess->decode($_POST['ty
 	$db->data['level']		= 2;
 	$db->data['nick'] 		= $db->data['name'];
 	$db->data['passwd']		= $db->passType($cfg['site']['encrypt'], $_POST['userpasswd']);
-	$db->data['passwdModify']		= time();
+	$db->data['passwdModify']		= 0;
 	if($db->sqlInsert("mdMember__account", "REPLACE", 0))
 	{
 		//회원 부가정보 등록

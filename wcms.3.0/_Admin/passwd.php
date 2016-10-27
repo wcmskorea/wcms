@@ -1,5 +1,8 @@
 <?php
 require_once "../_config.php";
+
+$Rows = $db->queryFetch(" SELECT * FROM `mdMember__account` AS A LEFT JOIN `mdMember__info` AS B ON A.id=B.id WHERE A.id='".$_SESSION['uid']."' AND A.level>'0' ");
+
 #--- SSL설정
 $posturl = ($cfg['site']['ssl']) ? 'https://'.$_SERVER['HTTP_HOST'].":".$cfg['site']['ssl'].$cfg['droot'].'/_Admin/passwdPost.php' : '/_Admin/passwdPost.php';
 ?>
@@ -42,12 +45,16 @@ $posturl = ($cfg['site']['ssl']) ? 'https://'.$_SERVER['HTTP_HOST'].":".$cfg['si
 		<div id="login_container">
 			<form id="loginForm" class="logForm" name="log" method="post" action="<?php echo($posturl);?>" enctype="multipart/form-data" target="hdFrame">
 			<fieldset class="darkgray">
-			
+
 			<table>
 				<tr>
-					<th rowspan="2">비밀번호를 변경하세요</th>
+					<th rowspan="3">비밀번호를 변경 하셔야합니다!</th>
 					<td style="padding-left:20px;"><input type="password" id="uid" name="uid" class="input_text required userpw" maxlength="15" style="width:100px;ime-mode:disabled" accesskey="L" tabindex="1" /></td>
 					<td style="padding-left:5px">변경할 비밀번호</td>
+				</tr>
+				<tr>
+					<td style="padding-left:20px;">&nbsp;</td>
+					<td style="padding-left:5px">&nbsp;</td>
 				</tr>
 				<tr>
 					<td style="padding-left:20px;"><input type="password" id="upw" name="upw" class="input_text required userpw" maxlength="15" style="width:100px;" accesskey="P" tabindex="2" onkeypress="if(event.keyCode==13){return $.submit(this.form);}" /></td>
@@ -55,7 +62,7 @@ $posturl = ($cfg['site']['ssl']) ? 'https://'.$_SERVER['HTTP_HOST'].":".$cfg['si
 				</tr>
 				<tr>
 					<td></td>
-					<td colspan="2" style="padding: 5px; text-align:right"><span class="btnPack red small strong"><button type="submit" tabindex="4">변경하기</button></span> <span class="btnPack blue small strong"><a href="/_Admin/">다음에 변경하기</a></span></td>
+					<td colspan="2" style="padding: 20px;"><span class="btnPack red medium strong"><button type="submit" tabindex="4">지금 변경하기</button></span><?php if($Rows['passwdModify'] > 0){?> <span class="btnPack black medium strong"><a href="/_Admin/">다음에 변경하기</a></span><?php } ?></td>
 				</tr>
 			</table>
 			</fieldset>
@@ -63,7 +70,8 @@ $posturl = ($cfg['site']['ssl']) ? 'https://'.$_SERVER['HTTP_HOST'].":".$cfg['si
 		</div>
 		<div id="login_footer" class="bg_gray">
 			<ul>
-				<li>비밀번호 변경기간이 만기(6개월)되어 변경하셔야 합니다</li>
+				<li>비밀번호가 초기 비밀번호의 경우 변경하셔야 합니다</li>
+				<li>비밀번호 변경기간이 만기(180일)되어 변경하셔야 합니다</li>
 			</ul>
 		</div><!-- footer -->
 	</div><!-- wrap -->

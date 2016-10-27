@@ -8,3 +8,4 @@
 [2016/10/27 07:36:01][127.0.0.1][][E:\Wcms\htdocs\wcms\wcms.3.0\_Admin\loginAccess.php]운영자 로그인 실패
 [2016/10/27 07:36:05][127.0.0.1][][E:\Wcms\htdocs\wcms\wcms.3.0\_Admin\loginAccess.php]운영자 로그인 실패
 [2016/10/27 07:36:14][127.0.0.1][master][E:\Wcms\htdocs\wcms\wcms.3.0\_Admin\loginAccess.php]시스템관리자 로그인 성공
+[2016/10/27 07:51:18][127.0.0.1][master][E:\Wcms\htdocs\wcms\wcms.3.0\_Admin\loginAccess.php]시스템관리자 로그인 성공

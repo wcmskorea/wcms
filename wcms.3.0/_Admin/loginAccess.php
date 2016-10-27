@@ -62,7 +62,7 @@ else
 		$_SESSION['useq']				= $Rows['seq'];
 		$_SESSION['udepartment']	    = $Rows['department'];
 		$_SESSION['uposition']          = "시스템관리자";
-		$passwdModify = $Rows['passwdModify'] > 0 ? $Rows['passwdModify'] : $Rows['dateReg'];
+		//$passwdModify = $Rows['passwdModify'] > 0 ? $Rows['passwdModify'] : $Rows['dateReg'];
 		$passwdExpire = mktime(date("H", $passwdModify),date("i", $passwdModify),date("s", $passwdModify),date("m", $passwdModify),date("d", $passwdModify)+180,date("Y", $passwdModify));	//비밀번호 유효기간 만료 여부
 
 		if($_POST['autoid'] == 'Y')
