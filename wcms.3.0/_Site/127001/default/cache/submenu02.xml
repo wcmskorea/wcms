@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu homeURL="/index.php" siteURL="/?cate=000999" mailURL="ceo@aceoa.com" color="990000">
+	<주메뉴 col="000" link="/?cate=000002002" target="_self" kText="회원정보" eText="Membership" subX="0" color="990000">
+	<서브메뉴 link="/?cate=000002001" target="_self" text="로그아웃"></서브메뉴>
+	<서브메뉴 link="/?cate=000002002" target="_self" text="회원정보변경"></서브메뉴>
+	<서브메뉴 link="/?cate=000999002" target="_self" text="회원이용약관"></서브메뉴>
+	<서브메뉴 link="/?cate=000999003" target="_self" text="개인정보취급방침"></서브메뉴>
+	</주메뉴>
+</menu>

@@ -57,6 +57,7 @@ if($_GET || $_POST && !preg_match("/set.php/i", $_SERVER["PHP_SELF"]))
 {
     /* 필수 파라메터값 XSS 공격방지 */
     if($_GET['cate']        && !preg_match("/^([0-9]+)$/i", $_GET['cate']))         { header("HTTP/1.0 500 Not found"); die(); }
+		if($_GET['skin']        && !preg_match("/^([a-z]+)$/i", $_GET['skin']))         { header("HTTP/1.0 500 Not found"); die(); }
     if($_GET['currentPage'] && !preg_match("/^([0-9]+)$/i", $_GET['currentPage']))  { header("HTTP/1.0 500 Not found"); die(); }
     if($_GET['year']        && !preg_match("/^([0-9]+)$/i", $_GET['year']))         { header("HTTP/1.0 500 Not found"); die(); }
     if($_GET['month']       && !preg_match("/^([0-9]+)$/i", $_GET['month']))        { header("HTTP/1.0 500 Not found"); die(); }

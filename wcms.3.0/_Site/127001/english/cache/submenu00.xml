@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<menu homeURL="/index.asp" siteURL="/000999001" mailURL="" color="ab7632">
+	<주메뉴 col="000" link="/000999001" target="_self" kText="사이트맵" eText="SiteMap" subX="0" color="ab7632">
+		<서브메뉴 link="/000999001" target="_self" text="사이트맵"></서브메뉴>
+	</주메뉴>
+</menu>

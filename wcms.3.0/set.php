@@ -106,41 +106,6 @@ else if($sess->decode($_POST['type']) == 'postSeted' || $sess->decode($_POST['ty
 		$func->err("[".$socket['code']."] ".$socket['msg']." 입니다.", "back");
 	}
 
-    /**
-	 * 공통 데이터베이스 설정
-	 */
-    if($db->data['id'] == 'wcmskorea')
-    {
-        $db->query("CREATE DATABASE IF NOT EXISTS `commonSql`");
-	    $db->selectDB('commonSql');
-        $db->query("CREATE TABLE IF NOT EXISTS `site__zipcode` (
-            `seq` int(10) unsigned NOT NULL auto_increment,
-            `zipcode` varchar(7) NOT NULL default '',
-            `sido` varchar(4) NOT NULL default '',
-            `gugun` varchar(13) NOT NULL default '',
-            `dong` varchar(44) NOT NULL default '',
-            `bunji` varchar(30) NOT NULL default '',
-        PRIMARY KEY  (`seq`),
-        KEY `sido` (`sido`),
-        KEY `gugun` (`gugun`),
-        KEY `dong` (`dong`)
-        ) ENGINE=MyISAM DEFAULT CHARSET=utf8;");
-        $db->query("load data local infile '".$_SERVER['DOCUMENT_ROOT']."_Admin/sql/zipcode.sql' into table `site__zipcode`");
-
-        $db->query("CREATE TABLE IF NOT EXISTS `site__calendar` (
-          `num` int(11) NOT NULL AUTO_INCREMENT,
-          `lunar_date` date NOT NULL DEFAULT '0000-00-00',
-          `solar_date` date NOT NULL DEFAULT '0000-00-00',
-          `yun` tinyint(1) NOT NULL DEFAULT '0',
-          `ganji` varchar(5) NOT NULL DEFAULT '',
-          `memo` varchar(50) NOT NULL DEFAULT '',
-          PRIMARY KEY (`num`),
-          KEY `lunar_date` (`lunar_date`),
-          KEY `solar_date` (`solar_date`)
-        ) ENGINE=MyISAM DEFAULT CHARSET=utf8;");
-        $db->query("load data local infile '".$_SERVER['DOCUMENT_ROOT']."_Admin/sql/calendar.sql' into table `site__calendar`");
-    }
-
 	/**
 	 * 디렉토리 복사 및 권한설정
 	 */

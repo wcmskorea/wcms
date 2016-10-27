@@ -5,13 +5,13 @@
 ;사이트 설정, 기본정보, 결제정보, 적립정보, 배송정보 환경설정
 
 [site]
-id = "wcms";
-authCode = "wcmskorea";
-siteName = "(주)10억홈피";
+id = "wcmskorea";
+authCode = "wcms@korea";
+siteName = "WCMSKOREA";
 siteTitle = "현재 홈페이지 준비중입니다.";
 ceo = "이성준";
-groupName = "(주)10억홈피";
-groupNo = "410-86-04828";
+groupName = "WCMSKOREA";
+groupNo = "410-86-30175";
 status = "인터넷정보제공호스팅업";
 class = "서비스";
 ecommerceNo = "";
@@ -19,7 +19,7 @@ phone = "062-374-4242";
 fax = "062-374-4249";
 address = "(506-306) 광주 광산구 신창동 1123-3, 2층";
 operator = "10억홈피";
-mobile = "010-2984-0407";
+mobile = "010-4615-9969";
 email = "master@aceoa.com";
 modules = "mdDocument,mdMember,mdBanner,mdApp01,mdPopup,mdSms,mdAnalytic";
 openSkin = "Y";
@@ -37,9 +37,9 @@ sizeSsnb = "205";
 sizeSside = "0";
 ssl = "443";
 debug = "0";
-dateReg = "1476823763";
+dateReg = "1476852894";
 dateCheck = "1367024400";
-info = "2016-10-18 22:49:21|127.0.0.1|default";
+info = "2016-10-19 06:54:52|127.0.0.1|default";
 tracking = "0";
 siteDescription = "10억홈피";
 keywords = "10억홈피";

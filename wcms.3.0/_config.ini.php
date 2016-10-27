@@ -6,7 +6,7 @@
 
 operator        = 3;                                    ;운영자 권한
 operatorip      = "/127.0.0.1/";                   ;운영자 아이피
-master          = "";   ;최고관리자 비밀번호(MD5)
+master          = "4d99dabb7bfb0aa26591aa5bd383c817";   ;최고관리자 비밀번호(MD5)
 version         = "3.0";								;솔루션 버전
 charset         = "utf-8";                              ;변경시 우편번호/아이디 검색 체크할것
 droot           = "/";                                  ;최상위 디렉토리
@@ -15,12 +15,12 @@ sleep           = 0;
 default         = "samplewcmskoreacom";
 
 [sys]
-api             = "";
-apiKey          = "";
+api             = "wcms";
+apiKey          = "wcmskorea";
 
 [db]
-dbUser          = "";                                                   ;데이터베이스 계정 아이디
-dbPass          = "";                                               ;데이터베이스 계정 비밀번호
+dbUser          = "root";                                                   ;데이터베이스 계정 아이디
+dbPass          = "wcmsroot";                                               ;데이터베이스 계정 비밀번호
 dbName          = "";
 
 [upload]                                                                    ;Flex 멀티 업로더 설정

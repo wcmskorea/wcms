@@ -23,8 +23,8 @@ class Syssock
 	/* 소켓 생성 */
 	function Syssock($user=null, $pass=null, $sender=null)
 	{
-		$this->server		= "";
-		$this->port 		= "";
+		$this->server		= "211.51.221.205";
+		$this->port 		= ($user == 'webmaaster') ? "65001" : "65000";
 		$this->timeout 		= 5;
 		$this->spamcount	= 3;
 		$this->logs			= 1;			//발송 로그 사용여부 (1 or 0)
