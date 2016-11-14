@@ -20,7 +20,7 @@ apiKey          = "wcmskorea";
 
 [db]
 dbUser          = "root";                                                   ;데이터베이스 계정 아이디
-dbPass          = "wcmsroot";                                               ;데이터베이스 계정 비밀번호
+dbPass          = "wcms4865";                                               ;데이터베이스 계정 비밀번호
 dbName          = "";
 
 [upload]                                                                    ;Flex 멀티 업로더 설정

@@ -6,7 +6,7 @@ $weeks = array('일','월','화','수','목','금','토');
 
 if($func->checkModule('mdApp01'))
 {
-	$mdApp01 = $db->queryFetch(" SELECT COUNT(*) AS count,cate FROM `mdApp01__content` WHERE state='0' AND DATE_FORMAT(FROM_UNIXTIME(dateReg),'%Y%m%d')='".date("Ymd")."' ");
+	$mdApp01 = $db->queryFetch(" SELECT COUNT(*) AS count,cate FROM `mdApp01__content` WHERE state='0' ");
 }
 ?>
 <div class="pd7">

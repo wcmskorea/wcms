@@ -43,7 +43,7 @@ else
 	}
 	else
 	{
-		$query = " SELECT * FROM `mdMember__account` AS A LEFT JOIN `mdMember__info` AS B ON A.id=B.id WHERE A.id='".strtolower(mysql_real_escape_string($_POST['uid']))."' AND A.passwd='".$db->passType($cfg['site']['encrypt'], mysql_real_escape_string($_POST['upw']))."' AND A.level<='".$cfg['operator']."' AND A.level>'0' ";
+		$query = " SELECT * FROM `mdMember__account` AS A LEFT JOIN `mdMember__info` AS B ON A.id=B.id WHERE A.id='".strtolower(mysql_real_escape_string($_POST['uid']))."' AND A.passwd='".$db->passType($cfg['site']['encrypt'], mysql_real_escape_string($_POST['upw']))."' AND A.level<'".$cfg['operator']."' AND A.level>'0' ";
 		$Rows = $db->queryFetch($query);
 	}
 
@@ -83,7 +83,7 @@ else
 	{
 		$_SESSION['uid'] = $_POST['uid'];
 	 	$func->setLog(__FILE__, "운영자 로그인 실패");
-	 	$func->err("등록되지 않거나, 입력된 정보가 다릅니다.", "parent.$('input[name=upw]').val('').select();");
+	 	$func->err("입력된 정보가 다릅거나 접근권한이 없습니다.", "parent.$('input[name=upw]').val('').select();");
 	}
 }
 $msg = "정상적으로 로그인되었습니다.";
