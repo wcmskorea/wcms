@@ -28,8 +28,7 @@ if($member->checkPerm('0') && !$_GET['print'])
 	echo('<div class="docInfo">
 	<ul class="docBtn">
 	<li><span class="btnPack green medium strong"><a href="'.$_SERVER['PHP_SELF'].'?'.__PARM__.'&type='.$sess->encode("input").'">콘텐츠 '.$lang['doc']['write'].'</a></span></li>
-	<li><span class="btnPack black medium"><a href="'.$_SERVER['PHP_SELF'].'?'.__PARM__.'&type='.$sess->encode('articleOptimize').'#procForm">'.$lang['doc']['optimize'].'</a></span></li>
-	</ul>
+		</ul>
 	</div>
 	<div class="clear"></div>');
 }

@@ -16,7 +16,6 @@ if($db->checkTable("display__".$_GET['skin']) < 1)
 <legend>→ TIP's ←</legend>
 <ul>
 	<li><?php echo($cfg['skinName'][$_GET['skin']]);?>의 기본 환경을 설정하는 페이지 입니다.</li>
-	<li>유료제공 모듈을 추가 설치하는 것은 "솔루션 제작사"를 통해서만 가능합니다. 상단 "CSS요청"을 이용해주세요.</li>
 </ul>
 </fieldset>
 
@@ -45,26 +44,9 @@ if($db->checkTable("display__".$_GET['skin']) < 1)
 				<?php
 				$form = new Form('table');
 
-				/*$form->addStart('기본언어 설정', 'lang', 1, 0, 'M');
-				$form->name = array('kr'=>'한국어','en'=>'영어','jp'=>'일어','cn'=>'중국어');
-				$form->add('select', $form->name, $cfg['site']['lang'], 'width:100px;');
-				$form->addEnd(0);
-
-				$form->addStart('프레임셋 설정', 'frame', 1, 0, 'M');
-				$form->add('select', array('N'=>'사용안함','Y'=>'사용함'), $cfg['site']['frame'], 'width:100px;');
-				$form->addEnd(1);*/
-
 				$form->addStart('사이트 정렬', 'align', 1, 0, 'M');
 				$form->add('select', array('left'=>'왼쪽 정렬','center'=>'가운데 정렬'), $cfg['site']['align'], 'width:100px;');
 				$form->addEnd(1);
-
-//				$form->addStart('글로벌 네비게이션', 'navGnb', 1, 0, 'M');
-//				$form->add('select', array('Y'=>'노출함','N'=>'노출안함'), $cfg['site']['navGnb'], 'width:100px;');
-//				$form->addEnd(1);
-
-//				$form->addStart('다국어 네비게이션', 'navUnb', 1, 0, 'M');
-//				$form->add('select', array('N'=>'노출안함','Y'=>'노출함'), $cfg['site']['navUnb'], 'width:100px;');
-//				$form->addEnd(1);
 
 				$form->addStart('퀵 스크롤', 'navQnb', 1, 0, 'M');
 				$form->add('select', array('N'=>'노출안함','Y'=>'노출함'), $cfg['site']['navQnb'], 'width:100px;');
@@ -125,63 +107,16 @@ if($db->checkTable("display__".$_GET['skin']) < 1)
                         $form->add('radio', array('0'=>'사용안함','1'=>'사용함'), $cfg['site']['debug'], 'color:red;');
                         $form->addEnd(1);
                     }
-					/*
-					$form->addStart('트래킹', 'tracking', 1, 0, 'M');
-					$form->add('radio', array('0'=>'사용안함','1'=>'사용함'), $cfg['site']['tracking'], 'color:red;');
-					$form->addEnd(1);
-
-					$form->addStart('페이스북 연동', 'facebook', 1, 0, 'M');
-					$form->add('radio', array('0'=>'사용안함','1'=>'사용함'), $cfg['site']['facebook'], 'color:red;');
-					$form->addEnd(1);
-
-					$form->addStart('트위터 연동', 'twitter', 1, 0, 'M');
-					$form->add('radio', array('0'=>'사용안함','1'=>'사용함'), $cfg['site']['twitter'], 'color:red;');
-					$form->addEnd(1);
-
-					$form->addStart('모바일사이트', 'mobileweb', 1, 0, 'M');
-					$form->add('radio', array('0'=>'사용안함','1'=>'사용함'), $cfg['site']['mobileweb'], 'color:red;');
-					$form->addEnd(1);
-
-					$form->addStart('다국어(영문)', 'englishweb', 1, 0, 'M');
-					$form->add('radio', array('0'=>'사용안함','1'=>'사용함'), $cfg['site']['englishweb'], 'color:red;');
-					$form->addEnd(1);
-
-					//$form->addStart('중문사이트', 'chineseweb', 1, 0, 'M');
-					//$form->add('radio', array('0'=>'사용안함','1'=>'사용함'), $cfg['site']['chineseweb'], 'color:red;');
-					//$form->addEnd(1);
-
-					$form->addStart('컨텍스트 메뉴차단', 'contextmenu', 1, 0, 'M');
-					$form->add('radio', array('0'=>'사용안함','1'=>'사용함'), $cfg['site']['contextmenu'], 'color:red;');
-					$form->addEnd(1);
-
-					$form->addStart('마우스 드래그차단', 'mouseDrag', 1, 0, 'M');
-					$form->add('radio', array('0'=>'사용안함','1'=>'사용함'), $cfg['site']['mouseDrag'], 'color:red;');
-					$form->addEnd(1);
-
-					$form->addStart('생일문자 예약발송', 'birthSms', 1, 0, 'M');
-					$form->add('radio', array('0'=>'사용안함','1'=>'사용함'), $cfg['site']['birthSms'], 'color:red;');
-					$form->addEnd(1);
-
-					$form->addStart('생일문자 발송시간', 'bsTime', 1, 0, 'M');
-					$form->add('hourMin', 'bsTime', $cfg['site']['bsTime']);
-					$form->addEnd(1);
-
-				}*/
 				}
 
 
 				$form->addStart('세션유지 설정', 'sessionTime', 1, 0, 'M');
-				$form->add('select', array('10'=>'기본설정(10분)','60'=>'1시간','120'=>'2시간','180'=>'3시간','240'=>'4시간','1440'=>'24시간'), $cfg['site']['sessionTime'], 'width:150px;');
+				$form->add('select', array('10'=>'기본설정(10분)','5'=>'기본설정(5분)'), $cfg['site']['sessionTime'], 'width:150px;');
 				$form->addEnd(1);
 
 				$form->addStart('세션저장 설정', 'sessionType', 1, 0, 'M');
 				$form->add('radio', array('sessiondb'=>'DB 저장','sessionfile'=>'FILE저장'), $cfg['site']['sessionType'], 'color:red;');//
 				$form->addEnd(1);
-
-				//$form->addStart('접속제한 설정', 'allowCountry', 1, 0, 'M');
-				//$form->add('select', array('1'=>'높음(국내만허용)','2'=>'중간(국내+미국허용)','3'=>'낮음(일부차단)','ALL'=>'전체허용'), $cfg['site']['allowCountry'], 'width:150px;');
-				//$form->addEnd(1);
-
 				?>
 				</tbody>
 			</table>

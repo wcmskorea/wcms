@@ -124,7 +124,7 @@ $pagingResult	=  $pagingInstance->result("../modules/mdApp01/manage/_controll.ph
 	$db->query(" SELECT * FROM `mdApp01__content` WHERE cate='".__CATE__."' ".$sq." ORDER BY dateReg DESC ".$pagingResult['LimitQuery'] );
 	if($db->getNumRows() < 1)
 	{
-		echo('<tr><td class="blank" colspan="5">등록된 내역이 존재하지 않습니다.</td></tr>');
+		echo('<tr><td class="blank" colspan="6">등록된 내역이 존재하지 않습니다.</td></tr>');
 	} else
 	{
 		while($Rows = $db->fetch())

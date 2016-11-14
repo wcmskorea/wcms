@@ -66,7 +66,7 @@ require_once "../include/commonHeader.php";
 		$form->addEnd(1);*/
 
 		$form->addStart('파비콘 설정', 'upfile', 1);
-		$form->addHtml('<li class="opt"><span class="small_gray">파일 확장자가 ico 인 파일을 "파일관리"를 통해 /user/사이트타입/image/icon/ 폴더에 업로드하세요. 사이즈(16x16)</span></li>');
+		$form->addHtml('<li class="opt"><span class="small_gray">파일 확장자가 ico 인 파일을 "파일관리"를 통해 /user/default/image/icon/ 폴더에 업로드하세요. 사이즈(16x16)</span></li>');
 		$form->addEnd(1);
 
 		$form->addStart('시스템 시작일', 'regyear', 1, 0, 'M');

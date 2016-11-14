@@ -34,15 +34,7 @@
 			<div class="table" style="margin-top:5px;"><div class="line">
 				<div id="todays"></div>
 			</div></div>
-			
-			<!-- 접속자 통계 그래프 -->
-			<!--<div class="table" style="margin-top:5px;"><div class="line">
-				<script type="text/javascript" src="/addon/chart/js/swfobject.js"></script>
-				<script type="text/javascript">
-					swfobject.embedSWF("/addon/chart/open-flash-chart.swf", "my_chart","100%", "200", "9.0.0", "expressInstall.swf", {"data-file":"include/visitStatistics.php"}, {"wmode":"transparent"} );
-				</script>
-			<div id="my_chart"></div>
-		</div></div>-->
+
 		</div>
 		<script type="text/javascript">
 		//<![CDATA[

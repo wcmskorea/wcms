@@ -230,7 +230,7 @@ else
 	<tr>
 		<th><label for="cate"><strong>상세 내용</strong><br /><br /><span><a href="#none" onclick="$.dialog('./skinSet.php','&amp;type=<?php echo($sess->encode('skin'));?>',470,250)" class="btnPack metal small"><span>스킨삽입</span></a></span></label></th>
 		<td class="dash_bottom bg_gray">
-		<?
+		<?php
 		//상세내용 : 다음 에디터
 		include __PATH__."addon/editor/editor.php";
 		?>

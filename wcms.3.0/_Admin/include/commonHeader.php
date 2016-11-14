@@ -13,7 +13,7 @@ usleep($cfg['sleep']);
 
 if((preg_match("/\_Admin/", $_SERVER['REQUEST_URI']) || preg_match("/admin/", $_SERVER['REQUEST_URI'])) && ($_SESSION['ulevel'] > $cfg['operator'] || !$_SESSION['ulevel']))
 {
-	$func->err("세션이 종료되었습니다. 로그인 페이지로 이동합니다.", "document.location.replace('/_Admin/login.php');");
+	$func->err("세션이 종료(".$cfg['site']['sessionTime'].")되었습니다. 로그인 페이지로 이동합니다.", "document.location.replace('/_Admin/login.php');");
 	die();
 }
 ?>

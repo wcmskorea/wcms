@@ -63,73 +63,11 @@ REPLACE INTO `site__` (`skin`, `cate`, `sort`, `child`, `hit`, `name`, `nameExtr
 ('default', '005001', 1, 0, NULL, '메뉴05-01', 'menu05-01', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', '10,990000', '', '_self', 'normal', 'N', 'N', 0);
 ";
 
-$sql['site'][2] = "
-REPLACE INTO `site__` (`skin`, `cate`, `sort`, `child`, `hit`, `name`, `nameExtra`, `mode`, `perm`, `permLmt`, `xml`, `url`, `target`, `status`, `useFull`, `useCate`, `upDate`) VALUES
-('mobile', '101', 1, 1, NULL, '메뉴01', 'menu01', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', ',', '', '_self', 'normal', 'N', 'N', 1377240574),
-('mobile', '101001', 1, 1, NULL, '메뉴01-01', 'menu01-01', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', '10,990000', '', '_self', 'normal', 'N', 'N', 0),
-('mobile', '101001001', 1, 0, NULL, '메뉴01-01-01', 'menu01-01-01', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', '10,990000', '', '_self', 'normal', 'N', 'N', 0),
-('mobile', '102', 2, 1, NULL, '메뉴02', 'menu02', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', ',', '', '_self', 'normal', 'N', 'N', 1377240578),
-('mobile', '102001', 1, 0, NULL, '메뉴02-01', 'menu02-1', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', '10,990000', '', '_self', 'normal', 'N', 'N', 0),
-('mobile', '103', 3, 1, NULL, '메뉴03', 'menu03', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', ',', '', '_self', 'normal', 'N', 'N', 1377240581),
-('mobile', '103001', 1, 0, NULL, '메뉴03-01', 'menu03-01', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', '10,990000', '', '_self', 'normal', 'N', 'N', 0),
-('mobile', '104', 4, 1, NULL, '메뉴04', 'menu04', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', ',', '', '_self', 'normal', 'N', 'N', 1377240585),
-('mobile', '104001', 1, 0, NULL, '메뉴04-01', 'menu04-01', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', '10,990000', '', '_self', 'normal', 'N', 'N', 0),
-('mobile', '105', 5, 1, NULL, '메뉴05', 'menu05', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', ',', '', '_self', 'normal', 'N', 'N', 1377240589),
-('mobile', '105001', 1, 0, NULL, '메뉴05-01', 'menu05-01', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', '10,990000', '', '_self', 'normal', 'N', 'N', 0);
-";
-
-$sql['site'][3] = "
-REPLACE INTO `site__` (`skin`, `cate`, `sort`, `child`, `hit`, `name`, `nameExtra`, `mode`, `perm`, `permLmt`, `xml`, `url`, `target`, `status`, `useFull`, `useCate`, `upDate`) VALUES
-('english', '201', 1, 1, NULL, '메뉴01', 'menu01', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', ',', '', '_self', 'normal', 'N', 'N', 1377240574),
-('english', '201001', 1, 1, NULL, '메뉴01-01', 'menu01-01', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', '10,990000', '', '_self', 'normal', 'N', 'N', 0),
-('english', '201001001', 1, 0, NULL, '메뉴01-01-01', 'menu01-01-01', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', '10,990000', '', '_self', 'normal', 'N', 'N', 0),
-('english', '202', 2, 1, NULL, '메뉴02', 'menu02', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', ',', '', '_self', 'normal', 'N', 'N', 1377240578),
-('english', '202001', 1, 0, NULL, '메뉴02-01', 'menu02-1', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', '10,990000', '', '_self', 'normal', 'N', 'N', 0),
-('english', '203', 3, 1, NULL, '메뉴03', 'menu03', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', ',', '', '_self', 'normal', 'N', 'N', 1377240581),
-('english', '203001', 1, 0, NULL, '메뉴03-01', 'menu03-01', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', '10,990000', '', '_self', 'normal', 'N', 'N', 0),
-('english', '204', 4, 1, NULL, '메뉴04', 'menu04', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', ',', '', '_self', 'normal', 'N', 'N', 1377240585),
-('english', '204001', 1, 0, NULL, '메뉴04-01', 'menu04-01', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', '10,990000', '', '_self', 'normal', 'N', 'N', 0),
-('english', '205', 5, 1, NULL, '메뉴05', 'menu05', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', ',', '', '_self', 'normal', 'N', 'N', 1377240589),
-('english', '205001', 1, 0, NULL, '메뉴05-01', 'menu05-01', 'mdDocument', '2,99,99,99,2,99', 'U,U,U,U,U,U', '10,990000', '', '_self', 'normal', 'N', 'N', 0);
-";
-
 /**--------------------------------------------------------------------------------------
  * 사이트 정보 - 기본 정보
  */
 $sql['site'][4] = "
 CREATE TABLE IF NOT EXISTS `display__default` (
-	`sort` tinyint(3) unsigned NOT NULL,
-	`position` char(3) NOT NULL default 'MC',
-	`cate` varchar(15) NOT NULL,
-	`name` varchar(200) NOT NULL,
-	`form` char(6) NOT NULL default '',
-	`listing` char(12) NOT NULL default '',
-	`useHidden` enum('Y','N','H','T') NOT NULL default 'N',
-	`config` text NOT NULL,
-PRIMARY KEY  (`sort`,`position`),
-KEY `position` (`position`),
-KEY `listOrder` (`sort`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-";
-
-$sql['site'][5] = "
-CREATE TABLE IF NOT EXISTS `display__mobile` (
-	`sort` tinyint(3) unsigned NOT NULL,
-	`position` char(3) NOT NULL default 'MC',
-	`cate` varchar(15) NOT NULL,
-	`name` varchar(200) NOT NULL,
-	`form` char(6) NOT NULL default '',
-	`listing` char(12) NOT NULL default '',
-	`useHidden` enum('Y','N','H','T') NOT NULL default 'N',
-	`config` text NOT NULL,
-PRIMARY KEY  (`sort`,`position`),
-KEY `position` (`position`),
-KEY `listOrder` (`sort`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-";
-
-$sql['site'][6] = "
-CREATE TABLE IF NOT EXISTS `display__english` (
 	`sort` tinyint(3) unsigned NOT NULL,
 	`position` char(3) NOT NULL default 'MC',
 	`cate` varchar(15) NOT NULL,
@@ -166,48 +104,6 @@ REPLACE INTO `display__default` (`sort`, `position`, `cate`, `name`, `form`, `li
 (2, 'MT', '', '로컬 네비게이션', 'menu', 'TextSlide', 'N', 'a:15:{s:6:\"module\";s:4:\"menu\";s:6:\"common\";s:1:\",\";s:5:\"width\";s:3:\"750\";s:6:\"height\";s:2:\"80\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:2:\"50\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"colorBg\";s:0:\"\";s:9:\"colorLine\";s:0:\"\";s:8:\"rollOver\";s:1:\"N\";}'),
 (2, 'ST', '', '로컬 네비게이션', 'menu', 'TextSlide', 'N', 'a:15:{s:6:\"module\";s:4:\"menu\";s:6:\"common\";s:1:\",\";s:5:\"width\";s:3:\"750\";s:6:\"height\";s:2:\"80\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:2:\"50\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"colorBg\";s:0:\"\";s:9:\"colorLine\";s:0:\"\";s:8:\"rollOver\";s:1:\"N\";}'),
 (3, 'MT', '000999999', '메인 비주얼', 'box', 'H', 'N', 'a:34:{s:6:\"module\";s:8:\"mdBanner\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"950\";s:6:\"height\";s:3:\"150\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"0\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:8:\"imgWidth\";s:3:\"0px\";s:9:\"imgHeight\";s:3:\"0px\";s:8:\"docCount\";s:1:\"1\";s:6:\"docPad\";s:1:\"0\";s:7:\"docType\";s:5:\"false\";s:8:\"docStart\";s:5:\"false\";s:8:\"docSpeed\";s:4:\"1000\";s:8:\"docDelay\";s:4:\"3000\";s:9:\"docEasing\";s:0:\"\";s:6:\"docBtn\";s:5:\"false\";s:8:\"docPager\";s:5:\"false\";s:8:\"docThumb\";N;s:10:\"docCaption\";s:5:\"false\";s:8:\"useUnion\";N;s:8:\"useTitle\";s:1:\"N\";s:7:\"useDate\";N;s:7:\"useMore\";s:1:\"N\";s:9:\"useHidden\";s:1:\"N\";s:10:\"cutSubject\";N;s:10:\"cutContent\";N;s:7:\"bgColor\";N;}');
-";
-
-$sql['site'][8] = "
-REPLACE INTO `display__mobile` (`sort`, `position`, `cate`, `name`, `form`, `listing`, `useHidden`, `config`) VALUES
-(1, 'MT', '', '회사의 로고를 삽입합니다.', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:2:\"./\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"200\";s:6:\"height\";s:2:\"80\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:2:\"50\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(3, 'MT', '', '메인 비주얼', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"950\";s:6:\"height\";s:3:\"150\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'ML', '', '메인 좌측', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"200\";s:6:\"height\";s:3:\"320\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'MC', '', '메인 중앙', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"540\";s:6:\"height\";s:3:\"320\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"5\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'MR', '', '메인 좌측', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"200\";s:6:\"height\";s:3:\"320\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'MB', '', '메인 하단', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"950\";s:6:\"height\";s:3:\"200\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'MF', '', '하단 주소영역', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"950\";s:6:\"height\";s:3:\"120\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'MQ', '', '메인 퀵메뉴', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:2:\"60\";s:6:\"height\";s:3:\"100\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:3:\"135\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"5\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'ST', '', '로고', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:2:\"./\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"200\";s:6:\"height\";s:2:\"80\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:2:\"50\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(3, 'ST', '', '서브 비주얼', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"950\";s:6:\"height\";s:3:\"120\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'SC', '', '서브 중앙 상단', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"745\";s:6:\"height\";s:3:\"100\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'SB', '', '서브 중앙 하단', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"745\";s:6:\"height\";s:3:\"100\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'SF', '', '서브 하단 사이트 정보', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"950\";s:6:\"height\";s:3:\"100\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'SQ', '', '서브 퀵 메뉴', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:2:\"60\";s:6:\"height\";s:3:\"100\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:3:\"135\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"5\";s:7:\"bgColor\";s:0:\"\";}'),
-(2, 'MT', '', '로컬 네비게이션', 'menu', 'TextSlide', 'N', 'a:15:{s:6:\"module\";s:4:\"menu\";s:6:\"common\";s:1:\",\";s:5:\"width\";s:3:\"750\";s:6:\"height\";s:2:\"80\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:2:\"50\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"colorBg\";s:0:\"\";s:9:\"colorLine\";s:0:\"\";s:8:\"rollOver\";s:1:\"N\";}'),
-(2, 'ST', '', '로컬 네비게이션', 'menu', 'TextSlide', 'N', 'a:15:{s:6:\"module\";s:4:\"menu\";s:6:\"common\";s:1:\",\";s:5:\"width\";s:3:\"750\";s:6:\"height\";s:2:\"80\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:2:\"50\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"colorBg\";s:0:\"\";s:9:\"colorLine\";s:0:\"\";s:8:\"rollOver\";s:1:\"N\";}'),
-(1, 'SL', '', 'rwar', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"200\";s:6:\"height\";s:3:\"320\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}');
-";
-
-$sql['site'][9] = "
-REPLACE INTO `display__english` (`sort`, `position`, `cate`, `name`, `form`, `listing`, `useHidden`, `config`) VALUES
-(1, 'MT', '', '회사의 로고를 삽입합니다.', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:2:\"./\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"200\";s:6:\"height\";s:2:\"80\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:2:\"50\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(3, 'MT', '', '메인 비주얼', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"950\";s:6:\"height\";s:3:\"150\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'ML', '', '메인 좌측', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"200\";s:6:\"height\";s:3:\"320\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'MC', '', '메인 중앙', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"540\";s:6:\"height\";s:3:\"320\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"5\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'MR', '', '메인 좌측', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"200\";s:6:\"height\";s:3:\"320\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'MB', '', '메인 하단', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"950\";s:6:\"height\";s:3:\"200\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'MF', '', '하단 주소영역', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"950\";s:6:\"height\";s:3:\"120\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'MQ', '', '메인 퀵메뉴', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:2:\"60\";s:6:\"height\";s:3:\"100\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:3:\"135\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"5\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'ST', '', '로고', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:2:\"./\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"200\";s:6:\"height\";s:2:\"80\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:2:\"50\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(3, 'ST', '', '서브 비주얼', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"950\";s:6:\"height\";s:3:\"120\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'SL', '', '좌측 서브메뉴', 'menu', 'Text', 'N', 'a:15:{s:6:\"module\";s:4:\"menu\";s:6:\"common\";s:3:\",Y,\";s:5:\"width\";s:3:\"200\";s:6:\"height\";s:3:\"200\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"0\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"colorBg\";s:0:\"\";s:9:\"colorLine\";s:0:\"\";s:8:\"rollOver\";s:1:\"N\";}'),
-(1, 'SC', '', '서브 중앙 상단', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"745\";s:6:\"height\";s:3:\"100\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'SB', '', '서브 중앙 하단', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"745\";s:6:\"height\";s:3:\"100\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'SF', '', '서브 하단 사이트 정보', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:3:\"950\";s:6:\"height\";s:3:\"100\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:1:\"5\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"bgColor\";s:0:\"\";}'),
-(1, 'SQ', '', '서브 퀵 메뉴', 'skin', '', 'N', 'a:16:{s:3:\"url\";s:0:\"\";s:6:\"target\";s:5:\"_self\";s:6:\"module\";s:4:\"skin\";s:6:\"common\";s:1:\"Y\";s:12:\"commonExcept\";s:1:\",\";s:5:\"width\";s:2:\"60\";s:6:\"height\";s:3:\"100\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:3:\"135\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"5\";s:7:\"bgColor\";s:0:\"\";}'),
-(2, 'MT', '', '로컬 네비게이션', 'menu', 'TextSlide', 'N', 'a:15:{s:6:\"module\";s:4:\"menu\";s:6:\"common\";s:1:\",\";s:5:\"width\";s:3:\"750\";s:6:\"height\";s:2:\"80\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:2:\"50\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"colorBg\";s:0:\"\";s:9:\"colorLine\";s:0:\"\";s:8:\"rollOver\";s:1:\"N\";}'),
-(2, 'ST', '', '로컬 네비게이션', 'menu', 'TextSlide', 'N', 'a:15:{s:6:\"module\";s:4:\"menu\";s:6:\"common\";s:1:\",\";s:5:\"width\";s:3:\"750\";s:6:\"height\";s:2:\"80\";s:3:\"pdt\";s:1:\"0\";s:3:\"pdr\";s:1:\"0\";s:3:\"pdb\";s:1:\"0\";s:3:\"pdl\";s:1:\"0\";s:3:\"mgt\";s:2:\"50\";s:3:\"mgr\";s:1:\"0\";s:3:\"mgb\";s:1:\"0\";s:3:\"mgl\";s:1:\"0\";s:7:\"colorBg\";s:0:\"\";s:9:\"colorLine\";s:0:\"\";s:8:\"rollOver\";s:1:\"N\";}');
 ";
 
 /**--------------------------------------------------------------------------------------

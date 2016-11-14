@@ -32,6 +32,6 @@ if(is_file($file))
 }
 else
 {
-	$func->err("해당파일(".$_GET['name'].") 존재하지 않습니다.", "window.history.back()");
+	$func->err("해당파일(".$file.") 존재하지 않습니다.", "window.history.back()");
 }
 ?>

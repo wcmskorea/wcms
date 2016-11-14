@@ -6,9 +6,10 @@ if($_SESSION['ulevel'] > $cfg['operator']) { $func->err("관리자만 이용할 
 <!DOCTYPE html>
 <html>
 <head>
-<title><?php echo($cfg['site']['siteName']);?> :: 파일관리 시스템 [v<?php echo($cfg['version']);?>]</title>
+<title><?php echo($cfg['site']['siteName']);?> :: 파일관리 시스템</title>
 	<meta http-equiv="content-type" content="application/xhtml+xml; charset=<?php echo($cfg['charset']);?>" />
 	<meta http-equiv="content-style-type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
 	<meta name="description" content="홈페이지,웹마스터,웹프로그래밍,웹디자인,유지보수,웹호스팅" />
 	<meta name="keywords" content="자바스크립트,html,플래쉬,플래시,홈페이지,웹마스터,웹프로그래밍,웹디자인,유지보수" />
 	<link rel="stylesheet" href="<?php echo($cfg['droot']);?>common/css/admin.css" type="text/css" charset="<?php echo($cfg['charset']);?>" media="all" />

@@ -42,7 +42,7 @@ else
     $func->checkRefer("GET");
     if(defined('__CATE__'))
     {
-        $Rows = $db->queryFetch(" SELECT * FROM `mdMember__` WHERE cate='".__CATE__."' ");
+        $Rows = $db->queryFetch(" SELECT * FROM `mdMember__` WHERE cate='000002001' ");
         $config = unserialize($Rows['config']);
     }
     else
@@ -53,14 +53,14 @@ else
 ?>
 <div id="messageBox"><span><img src="<?php echo($cfg['droot']);?>common/image/icon/delete.gif" /></spna>&nbsp;<strong>Message :</strong>&nbsp;&nbsp;&nbsp;</div>
 <fieldset id="help">
-<legend> < TIP's > </legend>
+<legend> < TIP's ></legend>
 <ul>
 	<li>본 페이지는 회원모듈의 유형 및 환경설정을 관리합니다.</li>
     <li>메뉴얼 및 우측 도움말을 확인하시어 신중히 설정하시기 바랍니다.</li>
 </ul>
 </fieldset>
 <form id="frmCate" name="frmCate" method="post" action="<?php echo($_SERVER['PHP_SELF']);?>" enctype="multipart/form-data" target="hdFrame">
-<input type="hidden" name="cate" value="<?php echo(__CATE__);?>" />
+<input type="hidden" name="cate" value="000002001" />
 <input type="hidden" name="type" value="cateModPost" />
 
 <table class="table_list" style="width:100%;">
@@ -104,98 +104,11 @@ else
     $form->addHtml('<td class="small_gray bg_gray">신규 회원등록시 문자발송 여부 선택</td>');
     $form->addEnd(1);
 
-    /*$form->addStart('파일 첨부형태', 'uploadType', 1);
-    $form->add('radio', array('Basic'=>'일반형', 'Multi'=>'멀티형'), $config['uploadType'], 'color:black;');
-    $form->addEnd();
-    $form->addHtml('<td class="small_gray bg_gray">첨부 가능갯수 설정 (자료실의 용도일 경우만 선택)</td>');
-    $form->addEnd(1);
-
-    $form->addStart('파일 첨부갯수', 'uploadCount', 1);
-    $form->add('select', array('0'=>'0개','1'=>'1개','3'=>'3개','5'=>'5개','10'=>'10개'), $config['uploadCount'], 'width:60px;');
-    $form->addHtml('<li class="opt gray">개</li>');
-    $form->addEnd();
-    $form->addHtml('<td class="small_gray bg_gray">첨부 가능갯수 설정 (자료실의 용도일 경우만 선택)</td>');
-    $form->addEnd(1);
-
-    $form->addStart('이미지 비율', 'thumbIsFix', 1, 0, 'M');
-    $form->add('radio', array('R'=>'비율형','F'=>'고정형'), $config['thumbIsFix'], 'color:black;');
-    $form->addEnd();
-    $form->addHtml('<td class="small_gray bg_gray">이미지 저장시 고정형인지 비율형인지 설정</td>');
-    $form->addEnd(1);
-
-    $form->addStart('이미지 설정', 'thumbType', 1, 0, 'M');
-    $form->add('radio', array('4,3'=>'가로형', '0'=>'가로형(배경)', '3,4'=>'세로형', '1,1'=>'정사각형'), $config['thumbType'], 'color:black;');
-    $form->addEnd();
-    $form->addHtml('<td class="small_gray bg_gray">이미지 저장시 자동 저장될 썸네일(손톱 이미지) 설정</td>');
-    $form->addEnd(1);
-
-    $thumbSsizeDisabled = ($config['thumbIsFix'] == "F") ? "" : "disabled=disabled";
-    $form->addStart('이미지 크기[소]', 'thumbSsize', 1, 0);
-    $form->addHtml('<li class="opt"><span>넓이</span></li>');
-    $form->add('input', 'thumbSsize', $config['thumbSsize'], 'width:40px; text-align:center;','digits="true" maxlength="4"');
-    $form->addHtml('<li class="opt gray">px</li><li class="opt"><span>, 높이</span></li>');
-    $form->id = 'thumbSsizeHeight';
-    $form->add('input', 'thumbSsizeHeight', $config['thumbSsizeHeight'], 'width:40px; text-align:center;','digits="true" maxlength="4"',$thumbSsizeDisabled);
-    $form->addHtml('<li class="opt gray">px</li>');
-    $form->addEnd(0);
-    $form->addHtml('<td class="small_gray bg_gray"><ol><li><span>이미지 업로드시 생성될 손톱이미지의 크기설정[소]</span></li></ol>');
-    $form->addEnd(1);
-
-    $thumbMsizeDisabled = ($config['thumbIsFix'] == "F") ? "" : "disabled=disabled";
-    $form->addStart('이미지 크기[중]', 'thumbMsize', 1, 0);
-    $form->addHtml('<li class="opt"><span>넓이</span></li>');
-    $form->add('input', 'thumbMsize', $config['thumbMsize'], 'width:40px; text-align:center;','digits="true" maxlength="4"');
-    $form->addHtml('<li class="opt gray">px</li><li class="opt"><span>, 높이</span></li>');
-    $form->id = 'thumbMsizeHeight';
-    $form->add('input', 'thumbMsizeHeight', $config['thumbMsizeHeight'], 'width:40px; text-align:center;','digits="true" maxlength="4"',$thumbMsizeDisabled);
-    $form->addHtml('<li class="opt gray">px</li>');
-    $form->addEnd(0);
-    $form->addHtml('<td class="small_gray bg_gray"><ol><li><span>이미지 업로드시 생성될 손톱이미지의 크기설정[중]</span></li></ol>');
-    $form->addEnd(1);
-
-    $thumbBsizeDisabled = ($config['thumbIsFix'] == "F") ? "" : "disabled=disabled";
-    $form->addStart('이미지 크기[대]', 'thumbBsize', 1, 0);
-    $form->addHtml('<li class="opt"><span>넓이</span></li>');
-    $form->add('input', 'thumbBsize', $config['thumbBsize'], 'width:40px; text-align:center;','digits="true" maxlength="4"');
-    $form->addHtml('<li class="opt gray">px</li><li class="opt"><span>, 높이</span></li>');
-    $form->id = 'thumbBsizeHeight';
-    $form->add('input', 'thumbBsizeHeight', $config['thumbBsizeHeight'], 'width:40px; text-align:center;','digits="true" maxlength="4"',$thumbBsizeDisabled);
-    $form->addHtml('<li class="opt gray">px</li>');
-    $form->addEnd(0);
-    $form->addHtml('<td class="small_gray bg_gray"><ol><li><span>이미지 업로드시 생성될 손톱이미지의 크기설정[대]</span></li></ol>');
-    $form->addEnd(1);*/
-
     $form->addStart('회원그룹 설정', 'group', 1);
     $form->add('textarea', 'group', $config['group'], 'width:384px; height:50px;','maxlength="100"');
     $form->addEnd(0);
     $form->addHtml('<td class="small_gray bg_gray"><ol><li><span>회원 그룹별 구분을 위한 설정</span><span class="small_blue">( 콤마[ , ]구분입력 )</span></li></ol></td>');
     $form->addEnd(1);
-
-    /*
-    $form->addStart('회원구분 설정', 'division', 1);
-    $form->add('textarea', 'division', $config['division'], 'width:270px; height:32px;');
-    $form->addEnd(0);
-    $form->addHtml('<td class="small_gray bg_gray"><span>회원 유형별 구분을 위한 설정</span><span class="small_blue">( 콤마[ , ]구분입력 )</span><br /><span>( ex : 일반,학생,직장인,주부,외국인 )</span></td>');
-    $form->addEnd(1);
-
-    $form->addStart('회원부서 설정', 'department', 1);
-    $form->add('textarea', 'department', $config['department'], 'width:270px; height:32px;');
-    $form->addEnd(0);
-    $form->addHtml('<td class="small_gray bg_gray"><span>회원 부서별 구분을 위한 설정</span><span class="small_blue">( 콤마[ , ]구분입력 )</span><br /><span>( ex : 관리부,운영부,영업부 )</span></td>');
-    $form->addEnd(1);
-
-    $form->addStart('회원팀 설정', 'team', 1);
-    $form->add('textarea', 'team', $config['team'], 'width:270px; height:32px;');
-    $form->addEnd(0);
-    $form->addHtml('<td class="small_gray bg_gray"><span>회원 팀별 구분을 위한 설정</span><span class="small_blue">( 콤마[ , ]구분입력 )</span><br /><span>( ex : 운영팀,개발팀,서비스팀 )</span></td>');
-    $form->addEnd(1);
-
-    $form->addStart('담당업무 설정', 'dedicate', 1);
-    $form->add('textarea', 'dedicate', $config['dedicate'], 'width:270px; height:32px;');
-    $form->addEnd(0);
-    $form->addHtml('<td class="small_gray bg_gray"><span>회원 담당업무 구분을 위한 설정</span><span class="small_blue">( 콤마[ , ]구분입력 )</span><br /><span>( ex : 기획,영업,전략,개발 )</span></td>');
-    $form->addEnd(1);
-    */
     ?>
 </table>
 <div class="pd5 center"><span class="btnPack medium icon strong"><span class="check"></span><button type="submit" onclick="return $.submit(this.form)">위 설정으로 적용</button></span></div>

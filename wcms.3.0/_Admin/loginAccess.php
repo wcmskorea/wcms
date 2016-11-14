@@ -35,7 +35,7 @@ else
 
 	if($cfg['site']['encrypt'] == 'crypt')
 	{
-		$Rows = $db->queryFetch(" SELECT * FROM `mdMember__account` AS A LEFT JOIN `mdMember__info` AS B ON A.id=B.id WHERE A.id='".strtolower(mysql_real_escape_string($_POST['uid']))."' AND A.level<='".$cfg['operator']."' AND A.level>'0' ");
+		$Rows = $db->queryFetch(" SELECT * FROM `mdMember__account` AS A LEFT JOIN `mdMember__info` AS B ON A.id=B.id WHERE A.id='".strtolower(mysql_real_escape_string($_POST['uid']))."' AND A.level<'".$cfg['operator']."' AND A.level>'0' ");
 		if(crypt($_POST['upw'], $Rows['passwd']) != $Rows['passwd'])
 		{
 			$func->err("비밀번호가 다르거나 일치하는 회원정보가 존재하지 않습니다.", "window.history.back()");
@@ -62,7 +62,7 @@ else
 		$_SESSION['useq']				= $Rows['seq'];
 		$_SESSION['udepartment']	    = $Rows['department'];
 		$_SESSION['uposition']          = "시스템관리자";
-		//$passwdModify = $Rows['passwdModify'] > 0 ? $Rows['passwdModify'] : $Rows['dateReg'];
+		$passwdModify = $Rows['passwdModify'] > 0 ? $Rows['passwdModify'] : $Rows['dateReg'];
 		$passwdExpire = mktime(date("H", $passwdModify),date("i", $passwdModify),date("s", $passwdModify),date("m", $passwdModify),date("d", $passwdModify)+180,date("Y", $passwdModify));	//비밀번호 유효기간 만료 여부
 
 		if($_POST['autoid'] == 'Y')
@@ -81,6 +81,7 @@ else
 	}
 	else
 	{
+		$_SESSION['uid'] = $_POST['uid'];
 	 	$func->setLog(__FILE__, "운영자 로그인 실패");
 	 	$func->err("등록되지 않거나, 입력된 정보가 다릅니다.", "parent.$('input[name=upw]').val('').select();");
 	}

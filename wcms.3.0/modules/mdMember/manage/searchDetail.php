@@ -25,6 +25,7 @@
 	$form->addEnd(0);
 	$form->addStart('이름', 'username');
 	$form->add('input', 'username', $_GET['username'], 'width:180px;');
+	$form->addHtml('<td rowspan="2" class="bg_gray"><p class="center"><span class="btnPack red medium strong"><button type="submit">검색하기</button></span></p></td>');
 	$form->addEnd(1);
 
 	$form->addStart('연락처', 'phone', 1);

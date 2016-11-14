@@ -143,7 +143,7 @@ $contentAdd = (array)unserialize($Rows['contentAdd']);
 						{
 							$dir = $cfg['upload']['dir'].date("Y",$sRows['regDate'])."/".date("m",$sRows['regDate'])."/".$sRows['fileName'];
 
-							echo('<li class="opt"><span><img src="'.$cfg['droot'].'common/image/files/'.strtolower($sRows['extName']).'.gif" align="absmiddle" onError="this.src=\'/image/files/unKonwn.gif\'" width="16" height="16" /></span><span><a href="'.$cfg['droot'].'addon/system/download.php?'.__PARM__.'&file='.$sess->encode($dir).'&name='.$sRows['realName'].'">'.$sRows['realName'].'</a></span></li>');
+							echo('<li class="opt"><span><img src="'.$cfg['droot'].'common/image/files/'.strtolower($sRows['extName']).'.gif" align="absmiddle" onError="this.src=\'/image/files/unKonwn.gif\'" width="16" height="16" /></span>&nbsp;<span><a href="'.$cfg['droot'].'addon/system/download.php?'.__PARM__.'&file='.$sess->encode($dir).'&name='.$sRows['realName'].'">'.$sRows['realName'].'</a></span></li>');
 							$n++;
 						}
 						if($n == 1) { echo('<li class="opt"><span>첨부파일 없음</span></li>'); }

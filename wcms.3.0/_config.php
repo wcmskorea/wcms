@@ -186,7 +186,6 @@ else if($db->selectDB(__DB__) && $_SERVER['PHP_SELF'] == '/set.php')
 $sess = new Sess();
 
 ini_set("session.cookie_lifetime", 0); // 초
-ini_set("session.cache_expire", $cfg['site']['sessionTime']); // 분
 ini_set("session.gc_maxlifetime", $cfg['site']['sessionTime'] * 60); // 초
 
 $cfg['site']['sessionType']= $cfg['site']['sessionType'] =='' ? 'sessionfile' : $cfg['site']['sessionType'];

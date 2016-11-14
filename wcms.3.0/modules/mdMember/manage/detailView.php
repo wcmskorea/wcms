@@ -23,6 +23,7 @@ if($Rows['seq'] && $Rows['id']) $func->setLog(__FILE__, "회원정보(".$Rows['i
 	<?php if($_GET['user']) { ?>
 	-. <strong><?php echo($Rows['name']);?></strong>님 ( <span class="red"><?php echo($member->memberPosition($Rows['level']));?></span> )<!-- <strong><?php echo($Rows['id']);?>--></strong><br />
 	<?php
+		$func->setLog(__FILE__, "회원(".$Rows['id'].") 정보 조회");
 	} else {
 	?>
 	<strong>신규 회원을 등록합니다.</strong><br />

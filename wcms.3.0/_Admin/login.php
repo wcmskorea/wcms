@@ -35,7 +35,7 @@ $posturl = ($cfg['site']['ssl']) ? 'https://'.$_SERVER['HTTP_HOST'].":".$cfg['si
 		<div id="login_header">
 			<div class="line_2_gray">
 				<div class="head_violet">
-					<h1 class="show"><strong><?php echo($cfg['site']['siteName']);?></strong> 웹사이트 관리 시스템 ( WCMS v<?php echo($cfg['version']);?> )</h1>
+					<h1 class="show"><strong><?php echo($cfg['site']['siteName']);?></strong> 웹사이트 관리 시스템 ( WCMS <?php echo($cfg['version']);?> )</h1>
 				</div>
 			</div>
 		</div>

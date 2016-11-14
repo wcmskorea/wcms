@@ -74,7 +74,6 @@ $cfg['module'] = @array_merge($cfg['module'], (array)unserialize($cfg['module'][
 		        ?>
 		        <option value="0" class="blue"<?php if($Rows['level'] == '0'){ echo(' selected="selected"'); }?>>(Lv.0)탈퇴회원</option>
 				</select></li>
-				<li class="opt">노출순서 : <input type="text" name="sort" class="input_gray center" style="width:30px;" value="<?php echo($Rows['sort']);?>" digits="true" maxlength="4" />
 				</ol>
 			</td>
 		</tr>
@@ -129,7 +128,7 @@ $cfg['module'] = @array_merge($cfg['module'], (array)unserialize($cfg['module'][
 		if($cfg['module']['opt_address'] != 'N')
 		{
 			$form->addStart('우편번호', 'zipcode', 1, 0 ,$cfg['module']['opt_address']);
-			$form->add('input', 'zipcode', $Rows['zipcode'], 'width:120px;','zipno="true" maxlength="7"');
+			$form->add('input', 'zipcode', $Rows['zipcode'], 'width:120px;','zipno="true" maxlength="5"');
 			$form->addEnd(1);
 
 			$form->addStart('주소', 'address01', 1, 0 ,$cfg['module']['opt_address']);

@@ -166,7 +166,7 @@ else
 	$form = new Form('table');
 
 	$form->addStart('리스트 형태', 'list', 1, 0, 'M');
-	$form->name = array('Page'=>'문서·페이지','List'=>'목록·리스트','ListMobile'=>'목록·리스트(모바일)','View'=>'뷰·리스트','Tabs'=>'탭·리스트','Gallery'=>'갤러리·앨범','GalleryTab'=>'갤러리·앨범(TAB)','Faq'=>'FAQ·자주하는질문','Cal'=>'일정·캘린더','Zine'=>'웹진·뉴스');
+	$form->name = array('Page'=>'문서·페이지','List'=>'목록·리스트','Gallery'=>'갤러리·앨범','Cal'=>'일정·캘린더');
 	$form->add('select', $form->name, $config['list'], 'width:290px;', '', 'onChange="return setDefaultDocument(this.value);"');
 	$form->addEnd();
 	$form->addHtml('<td class="small_gray bg_gray">콘텐츠 페이지 형태 설정</td>');

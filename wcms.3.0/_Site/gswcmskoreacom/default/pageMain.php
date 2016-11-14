@@ -59,10 +59,6 @@
 		//디스플레이 => 메인(퀵)
 		if($cfg['site']['navQnb'] == 'Y') { include __HOME__."quickMain.php"; }
 		?>
-        <?php
-        //프로토타입 리스트 출력
-        $display->loadPrototype();
-        ?>
 	</div>
 	<!-- wrap : end -->
 </div>

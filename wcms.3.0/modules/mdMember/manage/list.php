@@ -66,7 +66,7 @@ switch($_GET['sh'])
 		$sq .= " AND (B.mobile like '%".$_GET['shc']."%' OR B.phone like '%".$_GET['shc']."%')";
 		break;
 	case "email" :
-		$sq .= " AND A.email01 like '%".$_GET['shc']."%'";
+		$sq .= " AND A.email like '%".$_GET['shc']."%'";
 		break;
     case "etc" :
 		$sq .= " AND (B.groupName like '%".$_GET['shc']."%' OR B.certification like '%".$_GET['shc']."%')";
@@ -77,18 +77,18 @@ switch($_GET['sh'])
 		if($_GET['idcode'])    { $sq .= " AND A.idcode=".$db->passType($cfg['site']['encrypt'], $_GET['idcode']); }
 		if($_GET['email'])     { $sq .= " AND A.email like '%".$_GET['email']."%'"; }
 		if($_GET['phone'])     { $sq .= " AND (B.mobile like '%".$_GET['phone']."%' OR B.phone like '%".$_GET['phone']."%')"; }
-		if($_GET['dateReg'])   { 
+		if($_GET['dateReg'])   {
 			if($_GET['dateReg2']!='')
-				$sq .= " AND DATE_FORMAT(FROM_UNIXTIME(A.dateReg),'%Y-%m-%d') between '".$_GET['dateReg']."' and '".$_GET['dateReg2']."' "; 
+				$sq .= " AND DATE_FORMAT(FROM_UNIXTIME(A.dateReg),'%Y-%m-%d') between '".$_GET['dateReg']."' and '".$_GET['dateReg2']."' ";
 			else
-				$sq .= " AND DATE_FORMAT(FROM_UNIXTIME(A.dateReg),'%Y-%m-%d')='".$_GET['dateReg']."'"; 
+				$sq .= " AND DATE_FORMAT(FROM_UNIXTIME(A.dateReg),'%Y-%m-%d')='".$_GET['dateReg']."'";
 		}
 		//if($_GET['cafeNick'])  { $sq .= " AND B.cafeNick like '%".$_GET['cafeNick']."%'"; }
 		//if($_GET['cafeLevel']) { $sq .= " AND B.cafeLevel like '%".$_GET['cafeLevel']."%'"; }
 		if($_GET['recomId'])   { $sq .= " AND A.recom='".$_GET['recomId']."'"; }
 		if($_GET['dateSearchPeriod'])
 		{
-			if($_GET['dateSearchPeriod']=="birth") 
+			if($_GET['dateSearchPeriod']=="birth")
 			{
 				$_GET['syear']   = ($_GET['syear']) ? $_GET['syear'] : date('Y');
 				$_GET['smonth']  = ($_GET['smonth']) ? $_GET['smonth'] : date('m');
@@ -213,12 +213,12 @@ $cfg['module'] = @array_merge($cfg['module'], (array)unserialize($cfg['module'][
 	</thead>
 	<tbody>
 	<?php
-	$db->query(" SELECT *, A.seq AS seq FROM `mdMember__account` AS A LEFT JOIN `mdMember__info` AS B ON A.id=B.id 
+	$db->query(" SELECT *, A.seq AS seq FROM `mdMember__account` AS A LEFT JOIN `mdMember__info` AS B ON A.id=B.id
 	LEFT JOIN `mdMember__level` AS C ON A.level=C.level WHERE ".$sq." ORDER BY A.dateReg DESC ".$pagingResult['LimitQuery'] );
 
 	if($db->getNumRows() < 1)
 	{
-		echo('<tr><td class="blank" colspan="7">등록된 회원이 존재하지 않습니다.</td></tr>');
+		echo('<tr><td class="blank" colspan="6">등록된 회원이 존재하지 않습니다.</td></tr>');
 	}
 	else
 	{

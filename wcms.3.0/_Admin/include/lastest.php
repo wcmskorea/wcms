@@ -11,7 +11,6 @@ if($func->checkModule('mdApp01'))
 ?>
 <div class="pd7">
 	<ul>
-		<li style="float:right;"><span class="small_violet">(5분-주기갱신)</span></li>
     	<li style="padding-left:3px;" class="colorViolet"><strong><?php echo(date("Y .m .d"));?></strong>&nbsp;<span>(<?php echo($weeks[date('w')]);?>)</span></li>
     	<li class="colorViolet">&nbsp;<strong><?php echo(date("A"));?></strong><span><?php echo(date("h:i"));?></span></li>
 		<?php if($func->checkModule('mdApp01')) { ?>

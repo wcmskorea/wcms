@@ -7,7 +7,7 @@
 operator        = 3;                                    ;운영자 권한
 operatorip      = "/127.0.0.1/";                   ;운영자 아이피
 master          = "4d99dabb7bfb0aa26591aa5bd383c817";   ;최고관리자 비밀번호(MD5)
-version         = "3.0";								;솔루션 버전
+version         = "V3.0";								;솔루션 버전
 charset         = "utf-8";                              ;변경시 우편번호/아이디 검색 체크할것
 droot           = "/";                                  ;최상위 디렉토리
 mroot           = "/usr/local/mysql/bin/";              ;MySql DB백업을 위한 절대경로
@@ -56,6 +56,7 @@ mdSitemap       = "사이트맵";
 1               = mdPopup;
 2               = mdSms;
 3               = mdBanner;
+4               = mdMember;
 
 [skinName]                                                                  ;제공되는 스킨
 default         = "기본 사이트";

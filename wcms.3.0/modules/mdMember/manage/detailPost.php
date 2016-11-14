@@ -69,7 +69,7 @@ if($_POST['type'] == "post")
 		$sql = " SELECT COUNT(*) FROM `mdMember__account` WHERE id<>'".$Rows['id']."' AND LOWER(nick)='".$db->data['nick']."' ";
 		if($nick && $db->queryFetchOne($sql) > 0) { $func->err("['".$db->data['nick']."']은(는) 이미 사용중인 닉네임입니다."); }
 
-	} 
+	}
 	else //신규등록
 	{
 		$db->data['seq']		= '';
@@ -131,7 +131,7 @@ if($_POST['type'] == "post")
 		}
 
 		$msg2 = "정상적으로 회원".$msg." 되었습니다.";
-		$func->setLog(__FILE__, "회원(".$db->data['id'].")".$msg." 성공");
+		$func->setLog(__FILE__, "회원(".$db->data['id'].") ".$msg." 성공");
 
 		$func->err($msg2, "
 		parent.$.insert('#left_mdMember','../modules/mdMember/manage/_left.php');

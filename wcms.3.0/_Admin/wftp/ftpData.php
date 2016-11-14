@@ -42,7 +42,7 @@ for($i=0;$i<count($dirs)-1;$i++)
 			<span class="btnPack small icon"><span class="add"></span><a href="javascript:;" onclick="$.dialog('./ftpUpload.php?type=file&dir=<?php echo($_GET[dir]);?>',null,400,240);">파일 올리기</a></span>
 			<?php if($_SESSION['uid']=='test1') { ?><span class="btnPack small icon"><span class="add"></span><a href="javascript:;" onclick="$.dialog('./ftpUpload.php?type=file2&dir=<?php echo($_GET[dir]);?>',null,415,155);">swfUpload</a></span><?php } ?>
 			<?php if($_SESSION['uid']=='test1') { ?><span class="btnPack small icon"><span class="add"></span><a href="javascript:;" onclick="$.dialog('./ftpUpload.php?type=file3&dir=<?php echo($_GET[dir]);?>',null,400,240);">jqueryUpload</a></span><?php } ?>
-			<span class="btnPack black small icon"><span class="download"></span><a href="javascript:;" onclick="order(1);">선택백업</a></span></p>
+			</p>
 			</th>
 			<th><p class="center"><span>파일크기</span></p></th>
 			<th><p class="center"><span>저장날짜</span></p></th>
@@ -104,7 +104,7 @@ for($i=0;$i<count($dirs)-1;$i++)
 				$extname = array('jpg','jpeg','gif','png','bmp','swf');
 //				파일의 최종시간
 				$time = date("Y-m-d H:i:s",filectime($dir));
-				
+
 				//if($_SESSION['ulevel'] == '1'){
 					echo('<tr>
 					<th scope="col"><p class="center"><input type="checkbox" name="choice['.$key.']" value="'.$value.'" /></p></td>
@@ -125,7 +125,7 @@ for($i=0;$i<count($dirs)-1;$i++)
 					echo('<td><p class="right"><strong class="small_gray">'.$used.'</strong></p></td>
 					<td><p class="center"><span class="small_gray">'.$time.'</span></p></td>
 					</tr>');
-				
+
 			} //is_file.end
 		} //foreach.end
 		$buf = ob_get_contents();
